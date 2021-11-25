@@ -1,18 +1,18 @@
-try {
-    let digitos = [9,9,9]
-
-    let entrada = 0;
-    digitos.forEach((d, i) => entrada += d * Math.pow(10, (digitos.length - 1) - i));
-
-    entrada++
-
-    entrada = entrada.toString()
-
-    salida = []
-
-    for (let i = 0; i < entrada.length; i++) salida.push(entrada.charAt(i)) 
-
-    console.log(salida)
-} catch (error) {
-    console.log('Ocurrio un error...\n', error)
+function solucion(){
+    try {
+        let digitos = [9,8,9] //entrada del problema
+    
+        let entrada = 0; //contador para pasar la entrada a numero
+        digitos.forEach((d, i) => entrada += d * Math.pow(10, (digitos.length - 1) - i)); //conversion de la entrada en un numero decimal
+    
+        entrada++ //suma uno
+    
+        salida = [...entrada.toString()] //resultado en forma de arrya
+    
+        console.log(salida)
+    } catch (error) {
+        console.log('Ocurrio un error...\n', error)
+    }
 }
+
+solucion()
