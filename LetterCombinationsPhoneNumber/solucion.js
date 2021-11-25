@@ -1,6 +1,6 @@
-function solucion(){
+function solucion(digitos){
     try {
-        let digitos = "23"
+        // let digitos = "23"
 
         let mapeo = {
             "2": ['a', 'b', 'c'],
@@ -23,21 +23,12 @@ function solucion(){
                     mapeo[entrada[1]].forEach(b => {
                         if (entrada.length > 2) {
                             mapeo[entrada[2]].forEach(c => {
-                                if (entrada.length > 3) {
-                                    mapeo[entrada[3]].forEach(d => {
-                                        salida.push(`${a}${b}${c}${d}`)
-                                    });
-                                }else{
-                                    salida.push(`${a}${b}${c}`)
-                                }
+                                if (entrada.length > 3) mapeo[entrada[3]].forEach(d => salida.push(`${a}${b}${c}${d}`) );
+                                else salida.push(`${a}${b}${c}`)
                             });
-                        }else{
-                            salida.push(`${a}${b}`)
-                        }
+                        }else salida.push(`${a}${b}`)
                     });
-                }else{
-                    salida.push(`${a}`)
-                }
+                }else salida.push(`${a}`)
             });
         }
 
@@ -48,4 +39,4 @@ function solucion(){
     }
 }
 
-solucion()
+solucion("23")
